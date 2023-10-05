@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "statictemplates/css.html" %}
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    {% include "statictemplates/header.html" %}
+    <!-- Topbar End -->
+    <hr size="1" style="color: green;">
+
+    <div class="container">
+        <h2 style="font-style: normal; color: green;">Please Enter Details !!!</h2>
+        <div class="row">
+            {% for row in data %}
+            {{row.0}}
+            <form action="/update" method="post">
+                <div class="row">
+                    
+                    <!-- ID PATHAUNA KO LAGI HIDDEN USE GAREKO -->
+                    <!-- <input type="hidden" name="id"> -->
+                    
+                    <div class="col-md-6 my-3">
+                        <div class="bfg">
+                            <label for="id">#ID<span class="text-danger"> *</span></label>
+                            <input type="text" id="id" name="id" class="form-control" placeholder="" value="{{row.0}}" required>
+                        </div>
+                    </div>
+                      
+                    <div class="col-md-6 my-3">
+                        <div class="bfg">
+                            <label for="name">Crop Name<span class="text-danger"> *</span></label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="" value="{{row.1}}" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 my-3">
+                        <div class="bfg">
+                            <label for="scientific_name">Scientific Name<span class="text-danger"> *</span></label>
+                            <input type="text" id="scientific_name" name="scientific_name" class="form-control" placeholder="" value="{{row.2}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 my-3">
+                        <div class="bfg">
+                            <label for="description">Description<span class="text-danger"> *</span></label>
+                            <input type="text" id="description" name="description" class="form-control" placeholder="" value="{{row.3}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 my-3">
+                        <div class="bfg">
+                            <label for="season">Preferred Season<span class="text-danger"> *</span></label>
+                            <input type="text" id="season" name="season" class="form-control" placeholder="" value="{{row.4}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 my-3">
+                        <div class="bfg">
+                            <label for="image_url">Image url<span class="text-danger"> *</span></label>
+                            <input type="text" id="image_url" name="image_url" class="form-control" placeholder="" value="{{row.5}}" required>
+                        </div>
+                    </div>
+
+                    
+
+            
+                </div>
+                <div class="com-md-12">
+                    <button type="submit" class="bg btn btn-primary my-3">Add</button>
+                </div>
+            </form>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+
+ 
+
+   
+
+    <!-- Footer Start -->
+
+    <!-- Footer End -->
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

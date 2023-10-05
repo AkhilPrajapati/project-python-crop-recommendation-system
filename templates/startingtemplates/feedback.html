@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FarmFresh - Organic Farm Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+       <!-- CSS Start -->
+       {% include "statictemplates/css.html" %}
+       <!-- CSS End -->
+  
+</head>
+
+<body>
+       <!-- Topbar Start -->
+       {% include "statictemplates/header.html" %}
+       <!-- Topbar End -->
+
+
+
+
+
+    
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex d-lg-none">
+            <h1 class="m-0 display-4 text-secondary"><span class="text-white">Farm</span>Fresh</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="/" class="nav-item nav-link">Home</a>
+                <a href="/about" class="nav-item nav-link ">About</a>
+                <a href="/crops" class="nav-item nav-link">Crops</a>
+                <a href="/team" class="nav-item nav-link">Teams</a>
+                <a href="/testing" class="nav-item nav-link">Testing</a>
+                <a href="/feedback" class="nav-item nav-link active">Feedback</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
+                <a href="/clients" class="nav-item nav-link">Clients</a>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">About Us</h1>
+                    <a href="/" class="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
+                    <!-- <a href="" class="btn btn-secondary py-md-3 px-md-5">About Us</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="mx-auto text-center mb-5" style="max-width: 500px;">
+                <h6 class="text-primary text-uppercase">Feedback Us</h6>
+                <h1 class="display-5">Please Feel Free To Give Us Feedback</h1>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-7">
+                    <div class="bg-primary h-100 p-5">
+                        <form action="{{url_for('feedback_controller')}}" method="POST">
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <input type="text" name="name" class="form-control bg-light border-0 px-4" placeholder="Full Name" style="height: 55px;">
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" name="email" class="form-control bg-light border-0 px-4" placeholder="Your Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" name="subject" class="form-control bg-light border-0 px-4" placeholder="Subject" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" name="crop" class="form-control bg-light border-0 px-4" placeholder="Crop Name" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control bg-light border-0 px-4 py-3" rows="2" placeholder="Feedback Details"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-secondary w-100 py-3" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-secondary h-100 p-5">
+                        <h2 class="text-white mb-4">Get In Touch</h2>
+                        <div class="d-flex mb-4">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-geo-alt fs-4 text-white"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h5 class="text-white">Our Location</h5>
+                                <span class="text-white">NCIT-College, Balkumari</span>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-envelope-open fs-4 text-white"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h5 class="text-white">Email Us</h5>
+                                <span class="text-white">info@ncit.edu.np</span>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-phone-vibrate fs-4 text-white"></i>
+                            </div>
+                            <div class="ps-3">
+                                <h5 class="text-white">Call Us</h5>
+                                <span class="text-white">01-5186354</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+   
+
+    <!-- Facts Start -->
+    <!-- <div class="container-fluid bg-primary facts py-1 mb-5">
+    </div> -->
+    <!-- Facts End -->
+    
+
+    <!-- Footer Start -->
+    {% include "statictemplates/footer.html" %}
+    <!-- Footer End -->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

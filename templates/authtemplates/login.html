@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "statictemplates/css.html" %}
+</head>
+
+<body>
+
+    <!-- Topbar Start -->
+    {% include "statictemplates/header.html" %}
+    <!-- Topbar End -->
+    <hr size="1" style="color: green;">
+
+    <div class="container">
+        <h2 style="font-style: normal; color: green;">Please Enter Details !!!</h2>
+        <div class="row">
+            <form action="{{url_for('login_controller')}}" method="POST">
+                <div class="col-md-6 my-3">
+                    <div class="bfg">
+                        <label for="email">Email:<span class="text-danger"> *</span></label>
+                        <input pattern=".+@gmail.com" type="email" id="email" name="email" class="form-control" required placeholder="someone@example.com">
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <div class="bfg">
+                        <label for="password">Password:<span class="text-danger"> *</span></label>
+                        <input placeholder="min:8-characters" minlength="8" type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                </div>
+                <div class="com-md-12">
+                    <input type="submit" value="submit" class="bg btn btn-primary my-3"></input>
+                    {% for msg in message %}
+                     {{msg}}
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+<!-- Footer Start -->
+{% include "statictemplates/footer.html" %}
+<!-- Footer End -->
+
+<!-- Javascript Start -->
+{% include "statictemplates/javascript.html" %}
+<!-- Javascript End --> 
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

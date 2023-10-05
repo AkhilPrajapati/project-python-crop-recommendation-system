@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CropRecommend</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <!-- Footer Start -->
+    {% include "statictemplates/css.html" %}
+    <!-- Footer End -->
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    {% include "statictemplates/header.html" %}
+    <!-- Topbar End -->
+
+    
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
+        <a href="index.html" class="navbar-brand d-flex d-lg-none">
+            <h1 class="m-0 display-4 text-secondary"><span class="text-white">Farm</span>Fresh</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+                <a href="/" class="nav-item nav-link">Home</a>
+                <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/crops" class="nav-item nav-link active">Crops</a>
+                <a href="/team" class="nav-item nav-link">Teams</a>
+                <a href="/testing" class="nav-item nav-link">Testing</a>
+                <a href="/feedback" class="nav-item nav-link">Feedback</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
+                <a href="/clients" class="nav-item nav-link">Clients</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    
+
+    <!-- Crops Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mb-3">
+                        <h6 class="text-primary text-uppercase">Crops</h6>
+                        <h1 class="display-5">The List of Crops Are Here</h1>
+                    </div>
+                    <p class="mb-4">Crops are the plants or plant products that can be grown and harvested for profit or subsistence for human walfare.</p>
+                    <a href="" class="btn btn-primary py-md-3 px-md-5">explore</a>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa fa-apple-alt display-1 text-primary mb-3"></i>
+                        <h4>Fresh Crops</h4>
+                        <p class="mb-0">A list of crops are here.</p>
+                    </div>
+                </div>
+               
+       
+                {% for row in data %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light text-center p-5">
+                        <i class="fa display-1 text-primary mb-3"></i>
+                        <img height="90" width="90" style="border-radius: 50%;" src="{{row.5}}" alt="">
+                        <h4 class="text-secondary">{{row.1}}</h4>
+                        <h6 class="">Sc.Name: [{{row.2}}]</h6>
+                        <p class="mb-0">{{row.3}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <!-- Crops End -->
+
+
+   
+
+
+   
+    
+
+    <!-- Footer Start -->
+    {% include "statictemplates/footer.html" %}
+    <!-- Footer End -->
+
+    {% include "statictemplates/javascript.html" %}
+
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "statictemplates/css.html" %}
+</head>
+<body>
+    <!-- Topbar Start -->
+    {% include "statictemplates/adminheader.html" %}
+    <!-- Topbar End -->
+        
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <!-- <a class="navbar-brand" href="/dashboard">Dashboard</a> -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active" href="/dashboard">Dashboard</a>
+                      <a class="nav-link active" href="/admin/crops">Crops</a>
+                      <a class="nav-link active" href="/admin/parameters">Parameters</a>
+                      <a class="nav-link active" href="/admin/testinomials">Testinomials</a>
+                      <a class="nav-link active" href="/admin/testing">Testing</a>
+                      <a class="nav-link btn-primary navbar-brand" href="/admin/feedback">Feedback</a>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+            
+            <h3 class="text-primary" style="margin-top: 14px; margin-left: 120px;">Records of Testing Parameters</h3>
+
+            <table class="table container" style="margin-top: 20px;">    
+                <tr>
+                    <th class="text-secondary">#SN</th>
+                    <th class="text-secondary">#Date</th>
+                    <th class="text-secondary">#Email</th>
+                    <th class="text-secondary">#Subject</th>
+                    <th class="text-secondary">#Crop</th>
+                    <th class="text-secondary">#Description</th>
+                    <th class="text-secondary">#Actions</th>
+                </tr>
+                {% for row in data %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{row.6}}</td>
+                    <td>{{row.2}}</td>
+                    <td>{{row.3}}</td>
+                    <td>{{row.4}}</td>
+                    <td>{{row.5}}</td>
+                    <td>
+                        <a href = "mailto:{{row.2}}" class="btn btn-primary btn-sm">mail</a>
+                        <a href="/admin/feedback/delete/{{row.0}}" class="btn btn-sm btn-danger" onclick="return confirm('Please confirm to delete the record?')">delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+      <!-- Footer Start -->
+      {% include "statictemplates/footer.html" %}
+      <!-- Footer End -->
+
+      <!-- Javascript Start -->
+      {% include "statictemplates/javascript.html" %}
+      <!-- Javascript End --> 
+    
+      
+        
+    
+    
+    
+            
+    
+</body>
+</html>

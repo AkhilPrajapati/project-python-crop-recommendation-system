@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% include "statictemplates/css.html" %}
+
+</head>
+<body>
+  <!-- Topbar Start -->
+  {% include "statictemplates/adminheader.html" %}
+  <!-- Topbar End -->
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="/dashboard">Dashboard</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" href="/dashboard">Dashboard</a>
+            <a class="nav-link active" href="/admin/crops">Crops</a>
+            <a class="nav-link  navbar-brand btn-primary" href="/admin/parameters">Parameters</a>
+            <a class="nav-link active" href="/admin/testinomials">Testinomials</a>
+            <a class="nav-link active" href="/admin/testing">Testing</a>
+            <a class="nav-link active" href="/admin/feedback">Feedback</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+
+  <div class="container">
+    <h3 class="text-primary" style="margin-top: 14px;">Records of Testing Parameters</h3>
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>1. Nitrogen</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Nitrogen is the chemical element with the symbol N and atomic number 7. Nitrogen is a nonmetal and the lightest member of group 15 of the periodic table, often called the pnictogens. It is a common element in the universe, estimated at seventh in total abundance in the Milky Way and the Solar System. At standard temperature and pressure, two atoms of the element bond to form N2, a colorless and odorless diatomic gas. N2 forms about 78% of Earth's atmosphere.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+  
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>2. Phosphorus</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Phosphorus is a chemical element with the symbol P and atomic number 15. Elemental phosphorus exists in two major forms, white phosphorus and orangered phosphorus, but because it is highly reactive, phosphorus is never found as a free element on Earth. It has a concentration in the Earth's crust of about one gram per kilogram. In minerals, phosphorus generally occurs as phosphate.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>      
+      </div>
+    </div>
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>3. Potassium</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Potassium is an essential mineral that is needed by all tissues in the body. It is sometimes referred to as an electrolyte because it carries a small electrical charge that activates various cell and nerve functions. Potassium is found naturally in many foods and as a supplement. Its main role in the body is to help maintain normal levels of fluid inside our cells.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>4. Temperature</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Temperature is an essential factor in farming because it determines whether plants can thrive in the environment. Soil temperature importance at the very beginning of crop development also determines the time for sowing and planting. Since monthly, seasonal, and daily fluctuations of the ground’s temperature profoundly affect plant growth, farmers must regulate them, specifically during the hottest times when the sun is most intense. Farmers can optimize the timing of field activities by learning more about how the temperature of soil is affecting plant growth.</p>
+        <i style="color: orangered">Measurement: (celcius)</i><br>
+        <i style="color: orangered">Input Range: (...)</i> 
+      </div>
+    </div>
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>4. Humidity</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Humidity is important to make photosynthesis possible. In the case of Anthurium, good humidity around the plant is even more important than for most other crops, because the plant can only absorb a reduced amount of humidity and hence has less water evaporation than most plants. If the plant loses too much water, the stomata will close with the result that photosynthesis stops. If this happens, no further CO2 can be absorbed, and CO2 is required to keep the photosynthesis going. In addition, the temperature of a plant on a sunny day is mainly regulated by cooling through evaporation. Evaporating water can evacuate a lot of plant heat and is an efficient way of cooling for a plant. Open stomata ensure that a lot of heat can be evacuated. By closing the stomata, the plant temperature will often increase quickly.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+
+
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>5. Ph Value</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Potassium is an essential mineral that is needed by all tissues in the body. It is sometimes referred to as an electrolyte because it carries a small electrical charge that activates various cell and nerve functions. Potassium is found naturally in many foods and as a supplement. Its main role in the body is to help maintain normal levels of fluid inside our cells.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+
+
+
+
+    <div class="card my-1">
+      <div class="card-header">
+        <h2>7. Rainfall</h2>
+      </div>
+      <div class="card-body">
+        <p align="justify">Rainfall is an important factor in agricultural production. Without adequate rainfall, crops cannot grow, and yields can be limited. Farmers need to understand how much rainfall their crops need to produce a good yield. Organic farming has also a great importance of rainfall as it mostly depends on the natural climatic conditions. In general, most crops need between 20-40 inches of rain per year. This amount can vary based on the type of crop, the soil type, and the climate of the region. The amount of rainfall also needs to be distributed evenly throughout the growing season for the crops to benefit from it. This data can then be used to adjust and optimize their irrigation systems to ensure the crops are getting the right amount of water. Additionally, farmers can use meteorological data to plan for drought conditions so that they can take measures to minimize losses.</p>
+        <i style="color: orangered">Measurement: (mm)</i><br>
+        <i style="color: orangered">Input Range: (12-18)</i>   
+      </div>
+    </div>
+    <br>
+  </div>
+
+     <!-- Footer Start -->
+    {% include "statictemplates/footer.html" %}
+    <!-- Footer End -->
+  
+   <!-- Javascript Start -->
+{% include "statictemplates/javascript.html" %}
+<!-- Javascript End --> 
+
+
+
+</body>
+</html>

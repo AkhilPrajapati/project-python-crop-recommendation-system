@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    {% include "statictemplates/css.html" %}
+
+
+</head>
+<body>
+    <!-- Topbar Start -->
+    {% include "statictemplates/adminheader.html" %}
+    <!-- Topbar End -->
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="/dashboard">Dashboard</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" href="/dashboard">Dashboard</a>
+              <a class="nav-link active" href="/admin/crops">Crops</a>
+              <a class="nav-link active" href="/admin/parameters">Parameters</a>
+              <a class="nav-link btn-primary navbar-brand" href="/admin/testinomials">Testinomials</a>
+              <a class="nav-link active" href="/admin/testing">Testing</a>
+              <a class="nav-link active" href="/admin/feedback">Feedback</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+  <div class="container">
+    <h3 class="text-primary" style="margin-top: 14px;">Records of Testinomials</h3>
+    <div class="card">
+      
+      <div class="card-header">
+        <table class="table my-3">
+          <tr>
+            <th><h3 class="text-primary">#SN<h3></th>
+            <th><h3 class="text-primary">#FullName<h3></th>
+            <th><h3 class="text-primary">#E-mail<h3></th>
+            <th width ="50%"><h3 class="text-primary">#Message<h3></th>
+          </tr>
+          <tr>
+            <td style="font-size: 20px;">1.</td>
+            <td style="font-size: 20px;">Akhil Prazapati</td>
+            <td style="font-size: 20px;">akhilprajapati62@gmail.com</td>
+            <td style="font-size: 20px;">This is the best and only the freea available tool or web-app for getting recommendation that prefer the proper crop for cultivation as per the requirement of soil conditions and climate condition</td>
+          </tr>
+          <tr>
+            <td style="font-size: 20px;">2.</td>
+            <td style="font-size: 20px;">Anil Prazapati</td>
+            <td style="font-size: 20px;">anilprajapati62@gmail.com</td>
+            <td style="font-size: 20px;">This is the best and only the freea available tool or web-app for getting recommendation that prefer the proper crop for cultivation as per the requirement of soil conditions and climate condition</td>
+          </tr>
+          <tr>
+            <td style="font-size: 20px;">3.</td>
+            <td style="font-size: 20px;">Anu Prazapati</td>
+            <td style="font-size: 20px;">anuprajapati62@gmail.com</td>
+            <td style="font-size: 20px;">This is the best and only the freea available tool or web-app for getting recommendation that prefer the proper crop for cultivation as per the requirement of soil conditions and climate condition</td>
+          </tr>
+        </table>
+      </div>
+      <div class="card-body">
+        <i>All are the genune testing persons who have recommended our prediction system.</i>
+      </div>
+    </div>
+  
+  </div>
+
+
+
+   
+      
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    {% include "statictemplates/footer.html" %}
+    <!-- Footer End -->
+
+    <!-- Javascript Start -->
+    {% include "statictemplates/javascript.html" %}
+    <!-- Javascript End --> 
+
+
+</body>
+</html>

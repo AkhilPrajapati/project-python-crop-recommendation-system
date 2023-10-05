@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "statictemplates/css.html" %}
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    {% include "statictemplates/adminheader.html" %}
+    <!-- Topbar End -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="/dashboard">Dashboard</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" href="/dashboard">Dashboard</a>
+              <a class="nav-link navbar-brand btn-primary" href="/admin/crops">Crops</a>
+              <a class="nav-link active" href="/admin/parameters">Parameters</a>
+              <a class="nav-link active" href="/admin/testinomials">Testinomials</a>
+              <a class="nav-link active" href="/admin/testing">Testing</a>
+              <a class="nav-link active" href="/admin/feedback">Feedback</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+  
+    <div class="container">
+      <h3 class="text-primary" style="margin-top: 14px;">Records of Crops <a href="/admin/addcrops" style="margin-left: 20px;" class="btn btn-sm btn-primary me-3">add more</a></h3>
+      <table class="table container" style="margin-top: 20px;">    
+        <tr>
+            <th class="text-secondary">#SN</th>
+            <th class="text-secondary">#Name</th>
+            <th class="text-secondary">#Sc.Name</th>
+            <th class="text-secondary">#Season</th>
+            <th class="text-secondary">#Description</th>
+            <th class="text-secondary">#Image</th>
+            <th class="text-secondary">#Actions</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{row.1}}</td>
+            <td>{{row.2}}</td>
+            <td>{{row.4}}</td>
+            <td style="justify-content: center;">{{row.3}}</td>
+            <td><img height="160px" width="260" src="{{row.5}}" alt=""></td>
+            <td>
+              <a href="/update/{{row.0}}" class="btn btn-sm btn-warning my-2">update</a>
+              <a href="/admin/crops/delete/{{row.0}}" class="btn btn-sm btn-danger my-1" onclick="return confirm('Please confirm to delete the record?')">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div><br>
+
+    <!-- Footer Start -->
+    {% include "statictemplates/footer.html" %}
+    <!-- Footer End -->
+
+    <!-- Javascript Start -->
+    {% include "statictemplates/javascript.html" %}
+    <!-- Javascript End --> 
+
+</body>
+
+</html>
+
